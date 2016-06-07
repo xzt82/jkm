@@ -1,0 +1,5 @@
+com\jkm\business\service\MallAppParamService.class
+com\jkm\business\App.class
+com\jkm\business\dao\MallAppParamDao.class
+com\jkm\business\service\impl\MallAppParamServiceImpl.class
+com\jkm\business\entity\MallAppParam.class
