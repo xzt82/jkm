@@ -47,6 +47,7 @@ public class App extends WebMvcConfigurerAdapter
 			http.authorizeRequests().anyRequest().fullyAuthenticated().and().formLogin()
 					.loginPage("/login").failureUrl("/login?error").permitAll().and()
 					.logout().permitAll();
+			http.headers().frameOptions().sameOrigin();
 		}
 
 		@Override

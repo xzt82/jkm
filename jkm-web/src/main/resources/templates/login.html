@@ -7,7 +7,7 @@
 </head>
 <body onload="document.f.username.focus();">
 	<div class="container">
-		<div class="navbar">
+		<!-- <div class="navbar">
 			<div class="navbar-inner">
 				<a class="brand" href="http://www.thymeleaf.org"> Thymeleaf -
 					Plain </a>
@@ -15,19 +15,23 @@
 					<li><a th:href="@{/}" href="home.html"> Home </a></li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 		<div class="content">
-			<p th:if="${param.logout}" class="alert">You have been logged out</p>
-			<p th:if="${param.error}" class="alert alert-error">There was an error, please try again</p>
-			<h2>Login with Username and Password</h2>
-			<form name="form" th:action="@{/login}" action="/login" method="POST">
-				<fieldset>
-					<input type="text" name="username" value="" placeholder="Username" />
-					<input type="password" name="password" placeholder="Password" />
-				</fieldset>
-				<input type="submit" id="login" value="Login"
-					class="btn btn-primary" />
-			</form>
+			<div style = "text-align:left; margin:150px auto;width:270px;">
+				<p th:if="${param.logout}" class="alert">You have been logged out</p>
+				<p th:if="${param.error}" class="alert alert-error">There was an error, please try again</p>
+				<h2>移动后端管理平台</h2>
+				<form name="form" th:action="@{/login}" action="/login" method="POST">
+					<div class="form-group">
+						<input class="form-control" type="text" name="username" value="" placeholder="Username" />
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="password" name="password" placeholder="Password" />
+					</div>
+					<input type="submit" id="login" value="Login" 
+						class="btn btn-primary" />
+				</form>
+			</div>
 		</div>
 	</div>
 </body>
